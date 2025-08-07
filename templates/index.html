@@ -2,17 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inicio - Conciencia sobre los Residuos</title>
+    <title>Página de Inicio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Gestión de Residuos</h1>
+    <h1>Bienvenido a Proyecto Residuos</h1>
+    <p>Esta es la página principal de tu sitio.</p>
     <nav>
-        <a href="{{ url_for('index') }}">Inicio</a> |
-        <a href="{{ url_for('tipos') }}">Tipos de Residuos</a> |
-        <a href="{{ url_for('reciclaje') }}">Reciclaje</a>
+        <ul>
+            <li><a href="{{ url_for('tipos') }}">Tipos de residuos</a></li>
+            <li><a href="{{ url_for('reciclaje') }}">Reciclaje</a></li>
+            <li><a href="{{ url_for('denuncias') }}">Registrar Denuncias</a></li>
+        </ul>
     </nav>
-    <p>La gestión adecuada de los residuos ayuda a proteger el medio ambiente y la salud pública.</p>
-    <img src="{{ url_for('static', filename='reciclaje1.jpeg') }}" alt="Reciclaje" width="300">
 </body>
 </html>
